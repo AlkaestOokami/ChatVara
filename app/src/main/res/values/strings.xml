@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ChatVara</string>
+    <string name="enter">Entrar</string>
+    <string name="noAccount">Não possui uma capivara mensageira?</string>
+    <string name="singIn">Adote uma agora!</string>
 </resources>

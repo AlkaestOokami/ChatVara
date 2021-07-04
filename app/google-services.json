@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "597621287405",
+    "project_id": "chatvara-0101",
+    "storage_bucket": "chatvara-0101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597621287405:android:7642a757e0cab9b3485fe4",
+        "android_client_info": {
+          "package_name": "com.wolfoxstudio.chatvara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597621287405-fb8u1jhjittjc5k508ksb8nfkrvsie7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd7_vwA07tRNqZXzTjcdZxuQKqfvBOHsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597621287405-fb8u1jhjittjc5k508ksb8nfkrvsie7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

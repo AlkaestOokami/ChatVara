@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         editEmail = findViewById(R.id.edit_username);
         editPassword = findViewById(R.id.edit_email);
-        btnEnter = findViewById(R.id.button_login);
+        btnEnter = findViewById(R.id.button_singin);
         txtNewAccount = findViewById(R.id.txt_new_account02);
 
         btnEnter.setOnClickListener(new View.OnClickListener() {

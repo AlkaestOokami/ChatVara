@@ -13,14 +13,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
         android:background="@drawable/bg_edittext_rounded"
+        android:ems="10"
         android:hint="Nome"
+        android:inputType="textPersonName"
         android:paddingLeft="8dp"
-        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_select_photo" />
 
     <EditText
         android:id="@+id/edit_email"
@@ -30,7 +31,7 @@
         android:background="@drawable/bg_edittext_rounded"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="@+id/edit_username"
         app:layout_constraintStart_toStartOf="@+id/edit_username"
@@ -52,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_singin"
         style="@style/Theme.Design"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -63,5 +64,28 @@
         app:layout_constraintEnd_toEndOf="@+id/edit_email"
         app:layout_constraintStart_toStartOf="@+id/edit_email"
         app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <Button
+        android:id="@+id/btn_select_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_img_circle"
+        android:textColor="@color/white"
+        android:text="@string/photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="5dp"
+        app:civ_border_color="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_select_photo"
+        app:layout_constraintEnd_toEndOf="@+id/btn_select_photo"
+        app:layout_constraintStart_toStartOf="@+id/btn_select_photo"
+        app:layout_constraintTop_toTopOf="@+id/btn_select_photo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

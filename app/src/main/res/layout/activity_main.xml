@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_username" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_singin"
         style="@style/Theme.ChatVara"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -55,9 +55,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/noAccount"
-        app:layout_constraintEnd_toEndOf="@+id/button_login"
-        app:layout_constraintStart_toStartOf="@+id/button_login"
-        app:layout_constraintTop_toBottomOf="@+id/button_login" />
+        app:layout_constraintEnd_toEndOf="@+id/button_singin"
+        app:layout_constraintStart_toStartOf="@+id/button_singin"
+        app:layout_constraintTop_toBottomOf="@+id/button_singin" />
 
     <TextView
         android:id="@+id/txt_new_account02"

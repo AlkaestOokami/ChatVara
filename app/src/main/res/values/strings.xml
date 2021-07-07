@@ -5,4 +5,6 @@
     <string name="singIn">Adote uma agora!</string>
     <string name="insert">Cadastrar</string>
     <string name="photo">Add Foto</string>
+    <string name="contacts">Contatos</string>
+    <string name="logout">Sair</string>
 </resources>

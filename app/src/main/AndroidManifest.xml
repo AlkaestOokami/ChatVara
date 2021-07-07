@@ -8,9 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.ChatVara">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Message">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

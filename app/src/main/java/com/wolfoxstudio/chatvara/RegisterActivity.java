@@ -143,6 +143,12 @@ public class RegisterActivity extends AppCompatActivity {
                                             @Override
                                             public void onSuccess(DocumentReference documentReference) {
                                                 Log.i("Test", documentReference.getId());
+                                                editName.setText("");
+                                                editEmail.setText("");
+                                                editPassword.setText("");
+                                                btnSelectPhoto.setAlpha(1);
+                                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                                startActivity(intent);
                                             }
                                         })
                                         .addOnFailureListener(new OnFailureListener() {

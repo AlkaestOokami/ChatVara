@@ -18,7 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText editEmail;
     private EditText editPassword;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.act_login);
 
         editEmail = findViewById(R.id.edit_username);
         editPassword = findViewById(R.id.edit_email);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Test", password);
 
                 if (email == null || email.isEmpty() || password == null || password.isEmpty()){
-                    Toast.makeText(MainActivity.this, "Email e senha devem ser preenchidos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Email e senha devem ser preenchidos", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Log.i("Test", task.getResult().getUser().getUid());
-                                Intent intent = new Intent(MainActivity.this, Message.class);
+                                Intent intent = new Intent(LoginActivity.this, MessageActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 editEmail.setText("");
                 editPassword.setText("");
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });

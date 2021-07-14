@@ -2,9 +2,13 @@ package com.wolfoxstudio.chatvara;
 
 public class User {
 
-    private final String uuid;
-    private final String username;
-    private  final String profileUrl;
+    private String uuid;
+    private String username;
+    private String profileUrl;
+
+    public User(){
+
+    }
 
     public User(String uuid, String username, String profileUrl) {
         this.uuid = uuid;

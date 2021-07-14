@@ -1,7 +1,6 @@
 package com.wolfoxstudio.chatvara;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,12 +11,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Message extends AppCompatActivity {
+public class MessageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_message);
+        setContentView(R.layout.act_message);
         verifyAuthentication();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -26,7 +25,7 @@ public class Message extends AppCompatActivity {
 
     private void verifyAuthentication(){
         if(FirebaseAuth.getInstance().getUid() == null){
-            Intent intent = new Intent(Message.this, MainActivity.class);
+            Intent intent = new Intent(MessageActivity.this, LoginActivity.class);
             intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
@@ -42,6 +41,8 @@ public class Message extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.contacts:
+                Intent intent = new Intent(MessageActivity.this, ContactsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();

@@ -7,4 +7,6 @@
     <string name="photo">Add Foto</string>
     <string name="contacts">Contatos</string>
     <string name="logout">Sair</string>
+    <string name="btn_chat">Enviar</string>
+    <string name="message">Digite uma mensagem</string>
 </resources>

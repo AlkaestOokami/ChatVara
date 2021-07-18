@@ -137,11 +137,11 @@ public class RegisterActivity extends AppCompatActivity {
                                 User user = new User(uid, username, profileUrl);
 
                                 FirebaseFirestore.getInstance().collection("users")
-                                        .add(user)
-                                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                        .document(uid)
+                                        .set(user)
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
-                                            public void onSuccess(DocumentReference documentReference) {
-                                                Log.i("Test", documentReference.getId());
+                                            public void onSuccess(Void unused) {
                                                 editName.setText("");
                                                 editEmail.setText("");
                                                 editPassword.setText("");
